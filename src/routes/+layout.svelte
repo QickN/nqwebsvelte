@@ -10,44 +10,50 @@
 		<slot />
 	</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<footer class="glass-effect">
+		<p>created by <strong>nick</strong></p>
 	</footer>
 </div>
 
 <style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
 
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+main {
+	flex: 1; /* This will make sure that main takes all available space pushing footer to the bottom */
+	padding: 3rem;
+}
 
+footer {
+	width: 100%; /* Stretch footer across the width */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 6px;
+
+	border-radius: 0; 
+	position: relative; 
+}
+
+footer::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2px; 
+	width: 100%;
+}
+
+
+
+@media (min-width: 480px) {
 	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
+		padding: 12px 0;
 	}
+}
 
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
 </style>

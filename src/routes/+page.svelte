@@ -1,32 +1,29 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { goto } from "$app/navigation";
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+    <title>nick</title>
+    <meta name="description" content="Innovative Technology Solutions by TraceValley" />
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora,700&display=swap">
 
-		to your new<br />SvelteKit app
-	</h1>
+<main>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+    <section class="hero">
+        <h1>nick quam</h1>
+        <p>a portfolio
+		</p>
+		<button on:click={() => goto('/projects')}>click here!</button>
+    </section>
 
-	<Counter />
-</section>
+	  
+
+    <!-- Add your other sections like About, Services, Contact here -->
+
+</main>
+
 
 <style>
 	section {
@@ -35,25 +32,39 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
+		margin: 0;
+		margin-top: 10rem;
 	}
 
 	h1 {
 		width: 100%;
+		font-weight: bold;
+		font-size: 5rem;
+		margin: 0;
+		
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+	p{
+		font-style: italic;
+		font-size: 1.3rem;
+		margin: 0;
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	button {
+		padding: 10px 20px;
+        background-color: #b74d4d;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        margin-top: 50px; /* Space between text and button */
+
+
 	}
+
+	button:hover{
+		background-color: #FF9800;
+	}
+
+
 </style>
