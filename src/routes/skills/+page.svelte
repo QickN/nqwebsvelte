@@ -63,40 +63,68 @@
 
 .glass-effect {
   position: relative;
-  
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  padding: 30px;
-  animation: floatAnimation 10s infinite;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  padding: 2.5rem;
   transform-style: preserve-3d;
   transform: translateZ(0);
-  box-shadow: 0 2px 30px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   margin: 1rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-  
+.glass-effect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75em 1.5em;
+  font-size: 0.95em;
   font-weight: 500;
   font-family: inherit;
-  background-color: rgb(53, 118, 248);
+  background-color: var(--color-theme-1);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.3s ease;
   color: white;
-}
-button:hover {
-  border-color: #ffffff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1.25rem;
 }
 
-.nickimg{
-   width: 200px;
+button:hover {
+  background-color: var(--color-theme-2);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.nickimg {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nickimg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-theme-1);
 }
 </style>

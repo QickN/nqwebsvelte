@@ -1,24 +1,27 @@
 @import '@fontsource/fira-mono';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+	--font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
 		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-heading: 'Inter', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 	--color-bg-0: rgb(202, 216, 228);
 	--color-bg-1: hsl(209, 36%, 86%);
 	--color-bg-2: hsl(224, 44%, 95%);
-	--color-theme-1: #ff3e00;
-	--color-theme-2: #4075a6;
-	--color-text: rgba(255, 255, 255, 0.7);
+	--color-theme-1: #4361ee; /* Updated theme color */
+	--color-theme-2: #3f37c9; /* Updated secondary theme color */
+	--color-text: rgba(255, 255, 255, 0.9); /* Increased text contrast */
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);
 	color: var(--color-text);
 
-	--color-anim-0: #36c3ff;
-	--color-anim-1: rgb(163, 210, 255);
-	--color-anim-2: #fc9b9b;
-	--color-anim-3: #820300;
+	/* Updated more elegant gradient colors */
+	--color-anim-0: #0066ff;
+	--color-anim-1: #4895ef;
+	--color-anim-2: #4361ee;
+	--color-anim-3: #3a0ca3;
 }
 
 @keyframes backgroundAnimation {
@@ -32,47 +35,73 @@ body {
     margin: 0;
     background: linear-gradient(270deg,var(--color-anim-0), var(--color-anim-1), var(--color-anim-2), var(--color-anim-3));
     background-size: 600% 600%;
-    animation: backgroundAnimation 15s ease infinite;
+    animation: backgroundAnimation 20s ease infinite;
     background-attachment: fixed;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.015em;
 }
 
 h1,
 h2,
+h3,
+h4,
 p {
 	font-weight: 400;
+	margin-top: 0;
+}
+
+h1, h2, h3, h4 {
+	font-family: var(--font-heading);
+	letter-spacing: -0.025em;
 }
 
 p {
-	line-height: 1.5;
+	line-height: 1.6;
+	margin-bottom: 1.5em;
 }
 
 a {
 	color: var(--color-theme-1);
 	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
 a:hover {
-	text-decoration: underline;
+	color: var(--color-theme-2);
+	text-decoration: none;
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 	text-align: center;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+	line-height: 1.2;
 }
 
 h2 {
-	font-size: 1rem;
+	font-size: 1.75rem;
+	margin-bottom: 0.75em;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-bottom: 0.5em;
+	font-weight: 600;
 }
 
 pre {
 	font-size: 16px;
 	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+	padding: 1.25em;
 	overflow-x: auto;
 	color: var(--color-text);
+	margin-bottom: 1.5em;
 }
 
 .text-column {
