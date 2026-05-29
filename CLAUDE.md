@@ -4,10 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a personal portfolio website built with SvelteKit. The site has three main pages:
-- Home: A simple landing page with navigation
-- Projects: A showcase of various projects with links
-- Skills: Information about skills and educational background
+This is the SvelteKit source for nickquam.com, a compact personal product engineering site.
+The site has three main pages:
+
+- Home: product-founder landing page for Nick Quam
+- Work: current product work, including Checkout and Astretto
+- Profile: product engineering strengths and operating principles
 
 ## Development Commands
 
@@ -31,7 +33,7 @@ npm run preview
 npm run check
 
 # Check TypeScript errors in watch mode
-npm run check:watch 
+npm run check:watch
 
 # Lint code with Prettier
 npm run lint
@@ -59,6 +61,6 @@ npm run format
 
 - Pages use static prerendering (`export const prerender = true`)
 - Client-side rendering is enabled only in development mode for hot module replacement
-- The project uses a glass-effect design with animated background
+- The project uses a restrained dark glass design with CSS-only title and background motion
 - Navigation is handled via the Header component
-- Styling uses a mix of global CSS and component-scoped styles
+- Shared visual primitives live in `src/routes/styles.css`
