@@ -10,10 +10,10 @@
 
 <header class="top-nav" aria-label="Primary navigation">
 	<a href="/" class="brand" aria-label="Nick Quam home">
-		<span class="mark">NQ</span>
+		<span class="mark">N</span>
 		<span class="brand-text">
 			<strong>Nick Quam</strong>
-			<span>Founder & product engineer</span>
+			<span>Engineers solutions</span>
 		</span>
 	</a>
 

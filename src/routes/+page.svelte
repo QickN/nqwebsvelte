@@ -20,13 +20,8 @@
 
 <section class="hero">
 	<div class="hero-inner">
-		<div class="eyebrow reveal">
-			<span class="pulse" aria-hidden="true"></span>
-			Engineering practical product systems
-		</div>
-
 		<TitleReveal
-			lines={['Nick Quam', { text: 'engineers solutions.', className: 'gradient-text' }]}
+			lines={['Nick Quam engineers', { text: 'solutions.', className: 'gradient-text' }]}
 			yOffset={34}
 		/>
 
@@ -46,21 +41,6 @@
 			</a>
 			<a class="button secondary" href="/projects">See the work</a>
 		</div>
-
-		<div class="motion-strip reveal delay-3" aria-hidden="true">
-			<div class="ticker-track">
-				<span>native iOS</span>
-				<span>SwiftUI</span>
-				<span>Supabase</span>
-				<span>product design</span>
-				<span>launch systems</span>
-				<span>native iOS</span>
-				<span>SwiftUI</span>
-				<span>Supabase</span>
-				<span>product design</span>
-				<span>launch systems</span>
-			</div>
-		</div>
 	</div>
 </section>
 
@@ -72,7 +52,7 @@
 
 	<div class="grid">
 		<article class="card checkout-card reveal delay-1">
-			<p class="card-kicker">Launching now</p>
+			<p class="card-kicker">iPhone app</p>
 			<h3>Checkout</h3>
 			<p>
 				A native iPhone grocery rankings app for scanning products, comparing categories, and

@@ -131,11 +131,13 @@ button:focus:not(:focus-visible) {
 	place-items: center;
 	border: 1px solid rgba(255, 255, 255, 0.16);
 	border-radius: 14px;
-	background: linear-gradient(145deg, rgba(255, 255, 255, 0.26), transparent 36%),
-		linear-gradient(135deg, #67adff, #2f7bff 58%, #0b1220);
-	box-shadow: 0 14px 34px rgba(47, 123, 255, 0.3);
+	background: #101723;
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.1),
+		0 12px 28px rgba(47, 123, 255, 0.16);
 	font-size: 14px;
 	font-weight: 760;
+	line-height: 1;
 }
 
 .brand-text {
@@ -202,28 +204,6 @@ button:focus:not(:focus-visible) {
 	overflow: hidden;
 }
 
-.eyebrow {
-	display: inline-flex;
-	align-items: center;
-	gap: 10px;
-	border: 1px solid rgba(154, 200, 255, 0.24);
-	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.06);
-	padding: 8px 12px;
-	color: #d8eaff;
-	font-size: 13px;
-	font-weight: 700;
-	backdrop-filter: blur(18px);
-}
-
-.pulse {
-	width: 8px;
-	height: 8px;
-	border-radius: 999px;
-	background: var(--green);
-	box-shadow: 0 0 0 7px rgba(49, 209, 88, 0.12);
-}
-
 .title-reveal {
 	--title-y: 14px;
 	display: block;
@@ -287,17 +267,18 @@ h3 {
 }
 
 h1 {
-	margin: 24px auto 0;
+	margin: 0 auto;
 	max-width: 780px;
 	font-size: clamp(3rem, 7vw, 5.5rem);
 	font-weight: 680;
 }
 
 .gradient-text {
-	background: linear-gradient(90deg, #ffffff 0%, #d9ebff 36%, #66aaff 74%, #2f7bff 100%);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
+	color: #66aaff;
+}
+
+.gradient-text .title-reveal-glyph {
+	color: #66aaff;
 }
 
 .hero-copy {
@@ -491,31 +472,6 @@ h1 {
 		linear-gradient(240deg, rgba(47, 123, 255, 0.16), transparent 38%);
 }
 
-.motion-strip {
-	overflow: hidden;
-	margin: 34px auto 0;
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 18px;
-	background: rgba(255, 255, 255, 0.055);
-	max-width: 780px;
-}
-
-.ticker-track {
-	display: flex;
-	width: max-content;
-	animation: marquee 26s linear infinite;
-}
-
-.ticker-track span {
-	padding: 13px 18px;
-	color: rgba(247, 248, 251, 0.72);
-	font-size: 12px;
-	font-weight: 700;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-	white-space: nowrap;
-}
-
 .site-footer {
 	display: flex;
 	align-items: center;
@@ -574,12 +530,6 @@ h1 {
 	to {
 		opacity: 1;
 		transform: translate3d(0, 0, 0);
-	}
-}
-
-@keyframes marquee {
-	to {
-		transform: translateX(-50%);
 	}
 }
 
@@ -650,8 +600,7 @@ h1 {
 		line-height: 1.54;
 	}
 
-	.actions,
-	.motion-strip {
+	.actions {
 		width: 100%;
 		max-width: 320px;
 	}
