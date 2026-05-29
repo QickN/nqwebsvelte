@@ -1,3 +1,7 @@
+<script>
+	import TitleReveal from '$lib/TitleReveal.svelte';
+</script>
+
 <svelte:head>
 	<title>Profile | Nick Quam</title>
 	<meta
@@ -9,12 +13,10 @@
 <section class="section">
 	<div class="section-heading reveal">
 		<p class="card-kicker">Profile</p>
-		<h1 class="title-reveal">
-			<span class="title-line"><span>Builder, designer,</span></span>
-			<span class="title-line"
-				><span class="gradient-text" style="--title-delay: 110ms">release owner.</span></span
-			>
-		</h1>
+		<TitleReveal
+			lines={['Builder, designer,', { text: 'release owner.', className: 'gradient-text' }]}
+			yOffset={26}
+		/>
 		<p>
 			I work best at the intersection of product design and engineering, where decisions have to be
 			clear enough to ship and clean enough to maintain.

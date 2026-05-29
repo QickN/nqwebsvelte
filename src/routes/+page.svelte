@@ -1,3 +1,7 @@
+<script>
+	import TitleReveal from '$lib/TitleReveal.svelte';
+</script>
+
 <svelte:head>
 	<title>Nick Quam | Founder & Product Engineer</title>
 	<meta
@@ -18,12 +22,10 @@
 			Shipping focused consumer software
 		</div>
 
-		<h1 class="title-reveal">
-			<span class="title-line"><span>Nick Quam</span></span>
-			<span class="title-line"
-				><span class="gradient-text" style="--title-delay: 110ms">builds software.</span></span
-			>
-		</h1>
+		<TitleReveal
+			lines={['Nick Quam', { text: 'builds software.', className: 'gradient-text' }]}
+			yOffset={34}
+		/>
 
 		<p class="hero-copy reveal delay-1">
 			I build focused consumer software from first sketch to App Store review. Current work is
@@ -61,9 +63,7 @@
 
 <section class="section" aria-labelledby="current-work">
 	<div class="section-heading reveal">
-		<h2 id="current-work" class="title-reveal">
-			<span class="title-line"><span>Current work</span></span>
-		</h2>
+		<TitleReveal as="h2" id="current-work" lines={['Current work']} />
 		<p>Two product surfaces with one operating principle: make the useful thing feel obvious.</p>
 	</div>
 

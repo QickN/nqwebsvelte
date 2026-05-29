@@ -1,3 +1,7 @@
+<script>
+	import TitleReveal from '$lib/TitleReveal.svelte';
+</script>
+
 <svelte:head>
 	<title>Work | Nick Quam</title>
 	<meta
@@ -9,13 +13,10 @@
 <section class="section">
 	<div class="section-heading reveal">
 		<p class="card-kicker">Selected work</p>
-		<h1 class="title-reveal">
-			<span class="title-line"><span>Software with</span></span>
-			<span class="title-line"
-				><span class="gradient-text" style="--title-delay: 110ms">a strong point of view.</span
-				></span
-			>
-		</h1>
+		<TitleReveal
+			lines={['Software with', { text: 'a strong point of view.', className: 'gradient-text' }]}
+			yOffset={26}
+		/>
 		<p>
 			I care about the full system: interface, data model, release flow, support surface, and the
 			tiny interactions people feel but rarely name.
