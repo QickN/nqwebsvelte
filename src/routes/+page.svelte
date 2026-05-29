@@ -3,14 +3,17 @@
 </script>
 
 <svelte:head>
-	<title>Nick Quam | Founder & Product Engineer</title>
+	<title>Nick Quam | Product Engineer</title>
 	<meta
 		name="description"
-		content="Nick Quam is the founder and product engineer behind Astretto and Checkout, a native iPhone grocery rankings app."
+		content="Nick Quam engineers practical software solutions across native apps, product systems, and launch-ready web surfaces."
 	/>
 	<meta name="theme-color" content="#05070c" />
-	<meta property="og:title" content="Nick Quam | Founder & Product Engineer" />
-	<meta property="og:description" content="Founder and engineer behind Astretto and Checkout." />
+	<meta property="og:title" content="Nick Quam | Product Engineer" />
+	<meta
+		property="og:description"
+		content="Engineering practical software solutions across native apps, product systems, and launch-ready web surfaces."
+	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://nickquam.com" />
 </svelte:head>
@@ -19,17 +22,17 @@
 	<div class="hero-inner">
 		<div class="eyebrow reveal">
 			<span class="pulse" aria-hidden="true"></span>
-			Shipping focused consumer software
+			Engineering practical product systems
 		</div>
 
 		<TitleReveal
-			lines={['Nick Quam', { text: 'builds software.', className: 'gradient-text' }]}
+			lines={['Nick Quam', { text: 'engineers solutions.', className: 'gradient-text' }]}
 			yOffset={34}
 		/>
 
 		<p class="hero-copy reveal delay-1">
-			I build focused consumer software from first sketch to App Store review. Current work is
-			centered on Checkout, a native iPhone app for ranking what is actually worth buying.
+			I turn rough product ideas into working systems: native interfaces, clean data models,
+			shipping infrastructure, and the details that make software feel finished.
 		</p>
 
 		<div class="actions reveal delay-2">
@@ -64,7 +67,7 @@
 <section class="section" aria-labelledby="current-work">
 	<div class="section-heading reveal">
 		<TitleReveal as="h2" id="current-work" lines={['Current work']} />
-		<p>Two product surfaces with one operating principle: make the useful thing feel obvious.</p>
+		<p>Two current solutions with one operating principle: make the useful thing feel obvious.</p>
 	</div>
 
 	<div class="grid">
