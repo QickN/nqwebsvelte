@@ -99,7 +99,7 @@ button:focus:not(:focus-visible) {
 .site-shell {
 	position: relative;
 	z-index: 1;
-	width: min(1120px, calc(100% - 40px));
+	width: min(1120px, calc(100% - 48px));
 	min-height: 100vh;
 	margin: 0 auto;
 }
@@ -113,7 +113,7 @@ button:focus:not(:focus-visible) {
 	align-items: center;
 	justify-content: space-between;
 	gap: 18px;
-	padding: 24px 0;
+	padding: 18px 0;
 }
 
 .brand {
@@ -194,14 +194,14 @@ button:focus:not(:focus-visible) {
 .hero {
 	display: grid;
 	place-items: center;
-	min-height: min(720px, calc(100vh - 90px));
-	padding: 54px 0 76px;
+	min-height: clamp(500px, calc(100vh - 96px), 650px);
+	padding: 48px 0 64px;
 	text-align: center;
 }
 
 .hero-inner {
 	width: min(880px, 100%);
-	overflow: hidden;
+	min-width: 0;
 }
 
 .title-reveal {
@@ -269,7 +269,7 @@ h3 {
 h1 {
 	margin: 0 auto;
 	max-width: 780px;
-	font-size: clamp(3rem, 7vw, 5.5rem);
+	font-size: clamp(3rem, 7vw, 5.35rem);
 	font-weight: 680;
 }
 
@@ -344,7 +344,11 @@ h1 {
 }
 
 .section {
-	padding: 12px 0 96px;
+	padding: 34px 0 92px;
+}
+
+.page-frame > .section:first-child {
+	padding-top: clamp(46px, 7vw, 82px);
 }
 
 .section-heading {
@@ -373,12 +377,13 @@ h1 {
 .grid {
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 18px;
+	gap: 16px;
 }
 
 .card {
 	position: relative;
 	min-width: 0;
+	min-height: 318px;
 	overflow: hidden;
 	border: 1px solid var(--line);
 	border-radius: var(--radius-lg);
@@ -556,7 +561,7 @@ h1 {
 
 @media (max-width: 760px) {
 	.site-shell {
-		width: min(100% - 40px, 1120px);
+		width: min(100% - 32px, 1120px);
 	}
 
 	.top-nav {
@@ -571,7 +576,7 @@ h1 {
 
 	.hero {
 		min-height: auto;
-		padding: 54px 0 70px;
+		padding: 46px 0 58px;
 		text-align: left;
 	}
 
@@ -603,6 +608,7 @@ h1 {
 	.actions {
 		width: 100%;
 		max-width: 320px;
+		justify-content: flex-start;
 	}
 
 	.button {
@@ -616,6 +622,7 @@ h1 {
 
 	.card {
 		border-radius: 24px;
+		min-height: 0;
 	}
 
 	.card h2,
